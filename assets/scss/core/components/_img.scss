@@ -1,0 +1,40 @@
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.svg_img circle, .svg_img path, .svg_img polygon {
+    fill: currentColor;
+}
+
+.grayscale {
+	filter: gray;
+ -webkit-filter: grayscale(1);
+ filter: grayscale(1);
+}
+
+.object-fit {
+    object-fit: cover;
+}
+
+@include media-breakpoint-up(md) {
+	.md-img-140 {
+    	max-width: 140%;
+    }
+    .md-img-120 {
+    	max-width: 120%;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .lg-img-140 {
+    	max-width: 140%;
+    }
+    .lg-img-120 {
+    	max-width: 120%;
+    }
+}
+
+.mw-auto {
+    max-width: inherit;
+}

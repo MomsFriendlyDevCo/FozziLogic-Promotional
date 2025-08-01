@@ -1,0 +1,46 @@
+.navbar-transparent {
+	&:not(.headroom--not-top) {
+		&.navbar-blur {
+			backdrop-filter: blur(10px);
+		}
+		.logo-dark {
+			display: none;
+		}
+		.logo-light {
+			display: block;
+		}
+		.navbar-nav {
+			.nav-link {
+				@include media-breakpoint-up(lg) {
+					--#{$prefix}nav-link-color: rgba(var(--#{$prefix}white-rgb), 0.75);
+					--#{$prefix}nav-link-hover-color: var(--#{$prefix}white);
+					--#{$prefix}navbar-active-color: var(--#{$prefix}white);
+					&.active {
+						--#{$prefix}navbar-active-color: var(--#{$prefix}white);
+					}
+				}
+			}
+		}
+		.toggler-icon {
+			color: var(--#{$prefix}white);
+		}
+	}
+	
+	[data-bs-theme="light"] & {
+		.logo-light {
+			display: block;
+		}
+	}
+	&.headroom--not-top {
+
+		[data-bs-theme="light"] & {
+			.logo-light {
+				display: none;
+			}
+			.logo-dark {
+				display: block;
+			}
+		}	
+	}
+
+}

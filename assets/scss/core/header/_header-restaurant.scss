@@ -1,0 +1,47 @@
+.header-restaurant {
+    --header-s-icon-w: 40px;
+    --header-s-icon-h: 40px;
+    .header-top {
+        border-bottom: 1px solid var(--#{$prefix}gray-300);
+        .nav-link {
+            color: var(--#{$prefix}gray-800);
+            &:hover {
+                color: var(--#{$prefix}gray-900);
+            }
+        }
+    }
+    &.navbar-transparent:not(.headroom--not-top) {
+        .header-top {
+            color: rgba(var(--#{$prefix}white-rgb), 0.8);
+            border-bottom: 1px solid rgba(var(--#{$prefix}white-rgb), 0.1);
+            .nav-link {
+                color: rgba(var(--#{$prefix}white-rgb), 0.8);
+                &:hover {
+                    color: var(--#{$prefix}white);
+                }
+            }
+        }
+    }
+
+    .h-theme-switch {
+        .dropdown-toggle {
+            width: var(--header-s-icon-w);
+            height: var(--header-s-icon-h);
+            background-color: rgba(var(--#{$prefix}bg-mode), var(--#{$prefix}bg-opacity, 1));
+            color: rgba(var(--#{$prefix}text-mode-re), var(--#{$prefix}text-opacity, 1));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            padding: 0;
+            font-size: 22px;
+            border-radius: 50%;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .header-navbar-brand {
+        max-width: 45%;
+    }
+}

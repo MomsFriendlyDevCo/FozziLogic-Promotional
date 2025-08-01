@@ -1,0 +1,11 @@
+mark,
+.mark {
+	color: inherit;
+    padding: 0;
+    background: 0 0;
+    background-image: linear-gradient(120deg,rgba(var(--#{$prefix}mark-rgb, var(--#{$prefix}primary-rgb)),.4) 0,rgba(var(--#{$prefix}mark-rgb, var(--#{$prefix}primary-rgb)),.4) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.1em;
+    background-position: 0 80%;
+    position: relative;
+}

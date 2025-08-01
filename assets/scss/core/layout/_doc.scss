@@ -1,0 +1,26 @@
+.px-doc-wrap {
+	display: flex;
+	@include media-breakpoint-up(lg) {
+		.px-sidebar {
+			flex: 0 0 250px;
+			width: 250px;
+			border-right: 1px solid var(--#{$prefix}gray-300);
+			height: calc(100vh - 62px);
+			overflow-y: auto;
+		}
+		.px-main {
+			flex: 1;
+			padding-left: 40px;
+			padding-right: 40px;
+			height: calc(100vh - 62px);
+			overflow-y: auto;
+		}
+	}
+
+	.copy-code {
+		position: absolute;
+	    top: 10px;
+	    right: 10px;
+	    z-index: 9;
+	}
+}

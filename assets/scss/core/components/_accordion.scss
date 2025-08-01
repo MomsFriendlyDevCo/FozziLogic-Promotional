@@ -1,0 +1,109 @@
+.accordion {
+    --#{$prefix}accordion-color: var(--#{$prefix}body-color);
+    --#{$prefix}accordion-spacer: #{$accordion-spacer};
+    --#{$prefix}accordion-btn-color: #{$accordion-button-color};
+    --#{$prefix}accordion-btn-font-size: #{$accordion-button-font-size};
+    --#{$prefix}accordion-btn-font-weight: #{$accordion-button-font-weight};
+}
+
+.accordion-item {
+    @include border-radius(var(--#{$prefix}accordion-border-radius));
+
+    &:not(:last-child) {
+        margin-bottom: var(--#{$prefix}accordion-spacer);
+    }
+    &:not(:first-of-type) {
+        border-top: var(--#{$prefix}accordion-border-width) solid var(--#{$prefix}accordion-border-color);
+    }
+}
+
+.accordion-button {
+    @include border-radius(var(--#{$prefix}accordion-border-radius) !important);
+    @include font-size(var(--#{$prefix}accordion-btn-font-size));
+    font-weight: var(--#{$prefix}accordion-btn-font-weight);
+    line-height: $line-height-base;
+    &:not(.collapsed) {
+        box-shadow: none;
+    }
+}
+
+.accordion-body {
+    padding-top: 0;
+}
+
+.accordion-flush {
+    .accordion-item {
+        &:not(:last-child) {
+            --#{$prefix}accordion-spacer: 0;
+        }
+    }
+    .accordion-button {
+        --#{$prefix}accordion-btn-padding-x: 0;
+        --#{$prefix}accordion-btn-padding-y: 1.1rem;
+    }
+    .accordion-body {
+        --#{$prefix}accordion-body-padding-x: 0;
+    }
+}
+
+.accordion-style-01 {
+    .accordion {
+        .accordion-item {
+            border-radius: 0 !important;
+            margin: 0;
+            border: none;
+            + .accordion-item {
+                border-top: 1px solid var(--#{$prefix}gray-200);
+            }
+        }
+        .accordion-button {
+            padding: 1.8rem 3.8rem 1.8rem 0px;
+            position: relative;
+            &:after {
+                display: none;
+            }
+            .accordion-icon {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                color: currentColor;
+                &:before, 
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    background-color: currentColor;
+                    transition: ease height 0.35s;
+                }
+                &:before {
+                    width: 25px;
+                    height: 2px;
+                } 
+                &:after {
+                    height: 25px;
+                    width: 2px;
+                }
+            }
+            &:not(.collapsed) {
+                .accordion-icon {
+                    &::after {
+                        height: 0;
+                        width: 0;
+                    }
+                }
+            }
+        }
+        .accordion-body {
+            padding: 0 3.8rem 1rem 0px;
+        }
+    }
+    
+}

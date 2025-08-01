@@ -1,0 +1,78 @@
+:root {
+    --#{$prefix}font-alt:               #{$font-alt};
+    --#{$prefix}theme:                  var(--#{$prefix}primary);
+    --#{$prefix}theme-rgb:              var(--#{$prefix}primary-rgb);
+
+    --#{$prefix}text-mode:                  var(--#{$prefix}white-rgb);
+    --#{$prefix}bg-mode:                    var(--#{$prefix}white-rgb);
+    --#{$prefix}mode:                       var(--#{$prefix}white-rgb);
+
+    --#{$prefix}text-mode-re:               var(--#{$prefix}dark-rgb);
+    --#{$prefix}bg-mode-re:                 var(--#{$prefix}dark-rgb);
+    --#{$prefix}mode-re:                    var(--#{$prefix}dark-rgb);
+
+    --#{$prefix}shadow-rgb:                 var(--#{$prefix}dark-rgb);
+
+    // Custom Width 
+    --#{$prefix}w-custom:                       100px;
+    --#{$prefix}w-xxl-custom:                   100px;
+    --#{$prefix}w-xl-custom:                    100px;
+    --#{$prefix}w-lg-custom:                    100px;
+    --#{$prefix}w-md-custom:                    100px;
+    --#{$prefix}w-sm-custom:                    100px;
+
+    // Custom Height
+    --#{$prefix}h-custom:                       100px;
+    --#{$prefix}h-xxl-custom:                   100px;
+    --#{$prefix}h-xl-custom:                    100px;
+    --#{$prefix}h-lg-custom:                    100px;
+    --#{$prefix}h-md-custom:                    100px;
+    --#{$prefix}h-sm-custom:                    100px;
+}
+
+:root,
+[data-bs-theme="light"] {
+    --#{$prefix}avatar-border:              #{$white};
+
+    --#{$prefix}text-mode:                  var(--#{$prefix}dark-rgb);
+    --#{$prefix}bg-mode:                    var(--#{$prefix}dark-rgb);
+    --#{$prefix}mode:                    var(--#{$prefix}dark-rgb);
+
+    --#{$prefix}text-mode-re:               var(--#{$prefix}white-rgb);
+    --#{$prefix}bg-mode-re:                 var(--#{$prefix}white-rgb);
+    --#{$prefix}mode-re:                    var(--#{$prefix}white-rgb);
+
+    --#{$prefix}footer-link-color:          rgba(var(--#{$prefix}dark-rgb), 0.75);
+    --#{$prefix}footer-link-color-hover:    var(--#{$prefix}dark);
+
+    --#{$prefix}shadow-rgb:                 var(--#{$prefix}dark-rgb);
+
+}
+
+@if $enable-dark-mode {
+    @include color-mode(dark, true) {
+        --#{$prefix}gray-100:   #{$dark-gray-100};
+        --#{$prefix}gray-200:   #{$dark-gray-200};
+        --#{$prefix}gray-300:   #{$dark-gray-300};
+        --#{$prefix}gray-400:   #{$dark-gray-400};
+        --#{$prefix}gray-500:   #{$dark-gray-500};
+        --#{$prefix}gray-600:   #{$dark-gray-600};
+        --#{$prefix}gray-700:   #{$dark-gray-700};
+        --#{$prefix}gray-800:   #{$dark-gray-800};
+        --#{$prefix}gray-900:   #{$dark-gray-900};
+        
+        --#{$prefix}avatar-border:              #{$dark};
+
+
+        --#{$prefix}footer-link-color:          rgba(var(--#{$prefix}white-rgb), 0.75);
+        --#{$prefix}footer-link-color-hover:    var(--#{$prefix}white);
+
+        --#{$prefix}text-mode:                  var(--#{$prefix}white-rgb);
+        --#{$prefix}bg-mode:                  var(--#{$prefix}white-rgb);
+
+        --#{$prefix}text-mode-re:                  var(--#{$prefix}dark-rgb);
+        --#{$prefix}bg-mode-re:                  var(--#{$prefix}dark-rgb);
+
+        --#{$prefix}shadow-rgb:                 var(--#{$prefix}white-rgb);
+    }
+}

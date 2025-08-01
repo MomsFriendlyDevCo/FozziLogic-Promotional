@@ -1,0 +1,71 @@
+.w-custom {
+    width: var(--bs-w-custom);
+}
+
+@include media-breakpoint-up(sm) {
+    .w-sm-custom {
+        width: var(--bs-w-sm-custom);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .w-md-custom {
+        width: var(--bs-w-md-custom);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .w-lg-custom {
+        width: var(--bs-w-lg-custom);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .w-xl-custom {
+        width: var(--bs-w-xl-custom);
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .w-xxl-custom {
+        width: var(--bs-w-xxl-custom);
+    }
+}
+
+
+
+
+.h-custom {
+    height: var(--bs-h-custom);
+}
+
+
+@include media-breakpoint-up(sm) {
+    .h-sm-custom {
+        height: var(--bs-h-sm-custom);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .h-md-custom {
+        height: var(--bs-h-md-custom);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .h-lg-custom {
+        height: var(--bs-h-lg-custom);
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .h-xl-custom {
+        height: var(--bs-h-xl-custom);
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .h-xxl-custom {
+        height: var(--bs-h-xxl-custom);
+    }
+}

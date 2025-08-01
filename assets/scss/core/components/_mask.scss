@@ -1,0 +1,104 @@
+/* Mask
+------------------------*/
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &.bottom {
+        top: auto;
+    }
+}
+
+.mask-90 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    &.bottom {
+        top: 10%;
+        bottom: 0;
+    }
+}
+
+.mask-80 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    &.bottom {
+        top: 20%;
+        bottom: 0;
+    }
+}
+
+.mask-75 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+    &.bottom {
+        top: 25%;
+        bottom: 0;
+    }
+}
+
+.mask-65 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+    &.bottom {
+        top: 35%;
+        bottom: 0;
+    }
+}
+
+.mask-50 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    &.bottom {
+        top: 50%;
+        bottom: 0;
+    }
+}
+
+.mask-40 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    &.bottom {
+        top: 40%;
+        bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .mask-50vw {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: calc(50vw + 15px);
+        .no-gutters & {
+            width: 50vw;
+        }
+        &.left {
+            right: -15px;
+            left: auto;
+        }
+        &.right {
+            left: -15px;
+        }
+    }
+}

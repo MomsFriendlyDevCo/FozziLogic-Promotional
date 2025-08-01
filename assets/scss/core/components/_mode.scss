@@ -1,0 +1,13 @@
+// Dark mode item hide and show
+.dark-mode-display {
+  display: none !important;
+}
+
+[data-bs-theme="dark"] {
+  .dark-mode-display{
+    display: inline-block !important;
+  }
+  .light-mode-display{
+    display: none !important;
+  }
+}

@@ -1,0 +1,68 @@
+// All-caps `RGBA()` function used because of this Sass bug: https://github.com/sass/node-sass/issues/2251
+@each $color, $value in $grays {
+    $color-rgb: to-rgb($value);
+    .bg-gray-#{$color} {
+        background-color: var(--#{$prefix}gray-#{$color}) !important;
+    }
+    .text-gray-#{$color} {
+        color: var(--#{$prefix}gray-#{$color}) !important;
+    }
+    .border-gray-#{$color} {
+        border-color: var(--#{$prefix}gray-#{$color}) if($enable-important-utilities,  !important, null);
+    }
+}
+
+@each $color, $value in $theme-gradient-colors {
+    .bg-#{$color}-reverse {
+      background: linear-gradient(0deg, $value, rgba(var(--#{$prefix}body-bg-rgb), 0) 100%) !important;
+  
+    }
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-right-center {
+    background-position: center right;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+@include media-breakpoint-up(lg) {
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+}
+
+// Background Effect
+
+.bg-g-efect-1 {
+    background-image: radial-gradient(at bottom left, rgba(var(--#{$prefix}primary-rgb), 0.21) 0%, rgba(var(--#{$prefix}body-bg-rgb), 0) 60%);
+}
+
+
+.bg-g-efect-2 {
+    background-image: radial-gradient(at top right, rgba(var(--#{$prefix}primary-rgb), 0.21) 0%, rgba(var(--#{$prefix}body-bg-rgb), 0) 60%);
+}
+
+
+
+.bg-mode {
+    background-color: rgba(var(--#{$prefix}bg-mode), var(--#{$prefix}bg-opacity, 1)) !important;
+}
+.bg-mode-re {
+    background-color: rgba(var(--#{$prefix}bg-mode-re), var(--#{$prefix}bg-opacity, 1)) !important;
+}
+
+.bg-effect-mode {
+    [data-bs-theme="dark"] & {
+        filter: brightness(0) invert(1);
+    }
+}

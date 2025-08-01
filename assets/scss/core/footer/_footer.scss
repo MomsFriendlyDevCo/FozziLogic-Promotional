@@ -1,0 +1,28 @@
+.footer-logo-light {
+	display: none;
+	[data-bs-theme="dark"] & {
+		display: block;
+	}
+}
+.footer-logo-dark {
+	display: none;
+	[data-bs-theme="light"] & {
+		display: block;
+	}
+}
+
+
+.footer-mode {
+	color: var(--#{$prefix}footer-link-color);
+    .footer-link-mode {
+    	a {
+    		position: relative;
+    		display: inline-block;
+    		vertical-align: top;
+    		color: var(--#{$prefix}footer-link-color);
+    		&:hover {
+    			color: var(--#{$prefix}footer-link-color-hover);
+    		}
+    	}
+    }
+}

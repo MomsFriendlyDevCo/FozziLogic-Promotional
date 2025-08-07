@@ -1,9 +1,0 @@
-.header-software {
-	.nav-link {
-		--#{$prefix}nav-link-font-size: 16px;
-		--#{$prefix}nav-link-font-weight: 600;
-		--#{$prefix}nav-link-color: rgba(var(--#{$prefix}text-mode), var(--#{$prefix}text-opacity, 1));
-		--#{$prefix}nav-link-hover-color: var(--#{$prefix}primary);
-		--#{$prefix}navbar-active-color: var(--#{$prefix}primary);
-	}
-}

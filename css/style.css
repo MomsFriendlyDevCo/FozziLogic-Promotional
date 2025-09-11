@@ -6518,6 +6518,10 @@ fieldset:disabled .btn {
     overflow-anchor: none;
     transition: var(--bs-accordion-transition);
 }
+/* added this to make sure the text inside the accordion is black */
+.accordion-button strong {
+  color: #000 !important;  /* always black */
+}
 
 @media (prefers-reduced-motion: reduce) {
     .accordion-button {
